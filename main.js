@@ -13,6 +13,10 @@
     timer: null,
     break: false,
     now: 1500,
+    //add layer2
+    var layer2 = document.getElementById('layer2');
+    layer2.style.display = 'none';
+    
     tick: function(){       
         ptimer.now--;
         let remain = ptimer.now;
@@ -21,7 +25,7 @@
         let secs = remain;
         if (mins<10) {mins="0"+mins;}
         if (secs<10) {secs="0"+secs};
-
+         
         // Count down finish
         if (ptimer.now < 0) {
             // Pomo finish
@@ -55,6 +59,9 @@
     },
 
     start: function() {
+        //add layer2
+        layer2.style.display = 'block';
+      
         ptimer.timer = setInterval(ptimer.tick, 1000);
         ptimer.go.value = "Stop";
         ptimer.go.removeEventListener("click",ptimer.start);
@@ -62,6 +69,7 @@
     },
 
     stop: function() {
+        layer2.style.display = 'none';
         clearInterval(ptimer.timer);
         ptimer.timer = null;
         ptimer.go.value = "Start";
