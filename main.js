@@ -4,7 +4,9 @@
     init: function() {
         ptimer.time = document.getElementById("time");
         ptimer.go = document.getElementById("go");
-
+        //layer
+        ptimer.layer = document.getElementById('layer2');
+        layer.style.display = 'none';
         ptimer.go.addEventListener("click",ptimer.start);
         ptimer.go.disabled = false;
     },
@@ -13,9 +15,6 @@
     timer: null,
     break: false,
     now: 1500,
-    //add layer2
-    var layer = document.getElementById('layer2');
-    layer.style.display = 'none';
     
     tick: function(){       
         ptimer.now--;
@@ -60,7 +59,7 @@
 
     start: function() {
         //add layer2
-        layer.style.display = 'block';
+        ptimer.layer.style.display = 'block';
       
         ptimer.timer = setInterval(ptimer.tick, 1000);
         ptimer.go.value = "Stop";
@@ -69,7 +68,7 @@
     },
 
     stop: function() {
-        layer.style.display = 'none';
+        ptimer.layer.style.display = 'none';
         clearInterval(ptimer.timer);
         ptimer.timer = null;
         ptimer.go.value = "Start";
