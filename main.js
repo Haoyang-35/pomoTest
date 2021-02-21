@@ -88,7 +88,6 @@
     
     back: function() {
           ptimer.layer.style.display = 'none';
-          ptimer.go.removeEventListener("click",ptimer.back);
     }
 
 };
