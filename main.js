@@ -2,12 +2,14 @@
     time: null,
     go: null,
     layer: null,
+    back: null,
     init: function() {
         ptimer.time = document.getElementById("time");
         ptimer.go = document.getElementById("go");
         //layer
         ptimer.layer = document.getElementById("layer");
         ptimer.layer.style.display = 'none';
+        ptimer.back = document.getElementById("Back");
       
         ptimer.go.addEventListener("click",ptimer.start);
         ptimer.go.disabled = false;
@@ -81,7 +83,10 @@
         ptimer.go.addEventListener("click", ptimer.start);
         ptimer.time.style.borderColor = "#D54546";
     }
-
+    
+    back: function() {
+          
+    }
 
 };
 
