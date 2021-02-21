@@ -11,6 +11,7 @@
         ptimer.layer.style.display = 'none';
         ptimer.back = document.getElementById("back");
         ptimer.back.addEventListener("click",ptimer.back);
+        ptimer.back.disabled = false;
       
         ptimer.go.addEventListener("click",ptimer.start);
         ptimer.go.disabled = false;
