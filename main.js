@@ -14,8 +14,8 @@
     break: false,
     now: 1500,
     //add layer2
-    var layer2 = document.getElementById('layer2');
-    layer2.style.display = 'none';
+    var layer = document.getElementById('layer2');
+    layer.style.display = 'none';
     
     tick: function(){       
         ptimer.now--;
@@ -60,7 +60,7 @@
 
     start: function() {
         //add layer2
-        layer2.style.display = 'block';
+        layer.style.display = 'block';
       
         ptimer.timer = setInterval(ptimer.tick, 1000);
         ptimer.go.value = "Stop";
@@ -69,7 +69,7 @@
     },
 
     stop: function() {
-        layer2.style.display = 'none';
+        layer.style.display = 'none';
         clearInterval(ptimer.timer);
         ptimer.timer = null;
         ptimer.go.value = "Start";
@@ -79,7 +79,7 @@
         ptimer.go.addEventListener("click", ptimer.start);
         ptimer.time.style.borderColor = "#D54546";
     }
-
+    
 
 };
 
