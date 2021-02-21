@@ -58,7 +58,7 @@
 
     start: function() {
         //add layer2
-        ptimer.layer.style.display = 'block';
+        //ptimer.layer.style.display = 'block';
       
         ptimer.timer = setInterval(ptimer.tick, 1000);
         ptimer.go.value = "Stop";
@@ -67,7 +67,7 @@
     },
 
     stop: function() {
-        ptimer.layer.style.display = 'none';
+        //ptimer.layer.style.display = 'none';
         clearInterval(ptimer.timer);
         ptimer.timer = null;
         ptimer.go.value = "Start";
