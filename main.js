@@ -1,10 +1,14 @@
   let ptimer = {
     time: null,
     go: null,
+    layer: null,
     init: function() {
         ptimer.time = document.getElementById("time");
         ptimer.go = document.getElementById("go");
-
+        //layer
+        ptimer.layer = document.getElementById("layer");
+        ptimer.layer.style.display = 'none';
+      
         ptimer.go.addEventListener("click",ptimer.start);
         ptimer.go.disabled = false;
     },
@@ -55,6 +59,9 @@
     },
 
     start: function() {
+        //show
+        ptimer.layer.style.display = 'block';
+        
         ptimer.timer = setInterval(ptimer.tick, 1000);
         ptimer.go.value = "Stop";
         ptimer.go.removeEventListener("click",ptimer.start);
@@ -62,6 +69,9 @@
     },
 
     stop: function() {
+        //hide
+        ptimer.layer.style.display = 'none';
+      
         clearInterval(ptimer.timer);
         ptimer.timer = null;
         ptimer.go.value = "Start";
