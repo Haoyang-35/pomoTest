@@ -4,6 +4,15 @@ html{
     background-attachment:fixed;
 }
 
+//add layer
+#layer{
+    background: radial-gradient(301.17% 150.36% at 50.04% -31.22%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    height:800px;
+    width: 800px;
+}
+
+
 #container{
     background: radial-gradient(301.17% 150.36% at 50.04% -31.22%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
     border: 1px solid #FFFFFF;
