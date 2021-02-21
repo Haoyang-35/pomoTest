@@ -4,9 +4,6 @@
     init: function() {
         ptimer.time = document.getElementById("time");
         ptimer.go = document.getElementById("go");
-        //layer
-        ptimer.layer = document.getElementById('layer2');
-        layer.style.display = 'none';
         ptimer.go.addEventListener("click",ptimer.start);
         ptimer.go.disabled = false;
     },
@@ -15,6 +12,8 @@
     timer: null,
     break: false,
     now: 1500,
+    //layer
+    layer: document.getElementById('layer2');
     
     tick: function(){       
         ptimer.now--;
