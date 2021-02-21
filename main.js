@@ -9,7 +9,8 @@
         //layer
         ptimer.layer = document.getElementById("layer");
         ptimer.layer.style.display = 'none';
-        ptimer.back = document.getElementById("Back");
+        ptimer.back = document.getElementById("back");
+        ptimer.back.addEventListener("click",ptimer.back);
       
         ptimer.go.addEventListener("click",ptimer.start);
         ptimer.go.disabled = false;
@@ -82,10 +83,11 @@
         ptimer.go.removeEventListener("click",ptimer.stop);
         ptimer.go.addEventListener("click", ptimer.start);
         ptimer.time.style.borderColor = "#D54546";
-    }
+    },
     
     back: function() {
-          
+          ptimer.layer.style.display = 'none';
+          ptimer.go.removeEventListener("click",ptimer.back);
     }
 
 };
